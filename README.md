@@ -56,10 +56,11 @@ Menampilkan nama mahasiswa sesuai perintah yang diberikan di search bar
 Setup Database
 
 1. Buat Database
-'''CREATE DATABASE kampus;
-USE kampus;'''
+   
+'CREATE DATABASE kampus;
+USE kampus;'
 
-2. Buat Tabel Mahasiswa
+3. Buat Tabel Mahasiswa
 CREATE TABLE mahasiswa (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100),
@@ -68,7 +69,7 @@ CREATE TABLE mahasiswa (
 );
 
 
-3. Stored Procedure
+4. Stored Procedure
 Insert
 DELIMITER //
 CREATE PROCEDURE tambah_mahasiswa(
