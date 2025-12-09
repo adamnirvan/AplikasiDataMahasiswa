@@ -56,8 +56,8 @@ Menampilkan nama mahasiswa sesuai perintah yang diberikan di search bar
 Setup Database
 
 1. Buat Database
-CREATE DATABASE kampus;
-USE kampus;
+'''CREATE DATABASE kampus;
+USE kampus;'''
 
 2. Buat Tabel Mahasiswa
 CREATE TABLE mahasiswa (
