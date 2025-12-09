@@ -27,7 +27,7 @@ menggunakan stored procedure: hapus_mahasiswa
 
 Konfirmasi melalui halaman delete.php (opsional)
 
-5. Find (Mencari Mahasiswa)
+🔎5. Find (Mencari Mahasiswa)
 ![Find](Tampilan/Find.png)
 
 Menampilkan nama mahasiswa sesuai perintah yang diberikan di search bar
@@ -44,13 +44,17 @@ Menampilkan nama mahasiswa sesuai perintah yang diberikan di search bar
 └── /assets
      └── style.css (opsional)
 
+
 🛠️ Teknologi yang Digunakan
-Komponen	Teknologi
-Bahasa	PHP 8+
-Database	MySQL / MariaDB
-Server	Apache (XAMPP, MAMP, Laragon, dsb)
-UI	Bootstrap 5
-🗄️ Setup Database
+| Komponen | Teknologi                          |
+| -------- | ---------------------------------- |
+| Bahasa   | PHP 8+                             |
+| Database | MySQL / MariaDB                    |
+| Server   | Apache (XAMPP, MAMP, Laragon, dsb) |
+| UI       | Bootstrap 5                        |
+
+Setup Database
+
 1. Buat Database
 CREATE DATABASE kampus;
 USE kampus;
@@ -62,6 +66,7 @@ CREATE TABLE mahasiswa (
     nim VARCHAR(50),
     jurusan VARCHAR(100)
 );
+
 
 3. Stored Procedure
 Insert
@@ -76,6 +81,7 @@ BEGIN
     VALUES (p_nama, p_nim, p_jurusan);
 END //
 DELIMITER ;
+
 
 Update
 DELIMITER //
@@ -92,6 +98,7 @@ BEGIN
 END //
 DELIMITER ;
 
+
 Delete
 DELIMITER //
 CREATE PROCEDURE hapus_mahasiswa(
@@ -101,6 +108,7 @@ BEGIN
     DELETE FROM mahasiswa WHERE id = p_id;
 END //
 DELIMITER ;
+
 
 ⚙️ Konfigurasi Koneksi Database
 
@@ -119,19 +127,16 @@ if ($conn->connect_error) {
 }
 ?>
 
+
 ▶️ Cara Menjalankan
 
-Clone atau download repository
-
-Pindahkan folder ke htdocs (XAMPP) atau www (Laragon)
-
-Import database SQL
-
-Jalankan server Apache
-
-Akses aplikasi:
-
+1. Clone atau download repository
+2. Pindahkan folder ke htdocs (XAMPP) atau www (Laragon)
+3. Import database SQL
+4. Jalankan server Apache
+5. Akses aplikasi:
 http://localhost/nama-folder/
+
 
 🎨 Styling
 
@@ -142,10 +147,11 @@ Contoh penambahan pada <head>:
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 🧪 Testing Fitur
-Fitur	Status
-Tambah Data	✔ Berfungsi
-Edit Data	✔ Berfungsi
-Hapus Data	✔ Berfungsi
-Read Data	✔ Berfungsi
-Stored Procedure	✔ Terintegrasi
-👤 Author
+| Fitur            | Status         |
+| ---------------- | -------------- |
+| Tambah Data      | ✔ Berfungsi    |
+| Edit Data        | ✔ Berfungsi    |
+| Hapus Data       | ✔ Berfungsi    |
+| Read Data        | ✔ Berfungsi    |
+| Stored Procedure | ✔ Terintegrasi |
+
